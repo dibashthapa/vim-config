@@ -20,6 +20,7 @@ function M.config()
     sources = {
       -- Set a formatter
       formatting.rufo,
+      formatting.prettier,
       -- Set a linter
       diagnostics.rubocop,
     },

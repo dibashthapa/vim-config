@@ -53,11 +53,6 @@ map("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<
 map("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 map("v", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle_linewise_op(vim.fn.visualmode())<CR>", opts)
 
--- ForceWrite
-map("n", "<C-w>", "<cmd>w!<CR>", opts)
-
--- ForceQuit
-map("n", "<C-q>", "<cmd>q!<CR>", opts)
 
 -- Terminal
 map("n", "<C-\\>", "<cmd>ToggleTerm<CR>", opts)
