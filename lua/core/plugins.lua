@@ -14,7 +14,13 @@ packer.startup {
     use {
       "wbthomason/packer.nvim",
     }
-
+    --Emmet
+    use {
+      "mattn/emmet-vim",
+      config = function ()
+        vim.g.user_emmet_leader_key = ','
+      end
+    }
     -- Optimiser
     use {
       "lewis6991/impatient.nvim",
