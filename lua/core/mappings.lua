@@ -4,17 +4,6 @@ local opts = { noremap = true, silent = true }
 
 local map = vim.api.nvim_set_keymap
 
--- Remap space as leader key
-map("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
--- Normal --
--- Better window navigation
-map("n", "<C-h>", "<C-w>h", opts)
-map("n", "<C-j>", "<C-w>j", opts)
-map("n", "<C-k>", "<C-w>k", opts)
-map("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
 map("n", "<C-Up>", "<cmd>resize -2<CR>", opts)
@@ -31,7 +20,7 @@ map("n", "<A-j>", "<Esc><cmd>m .+1<CR>==gi", opts)
 map("n", "<A-k>", "<Esc><cmd>m .-2<CR>==gi", opts)
 
 -- NvimTree
-map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
+map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", opts)
 map("n", "<leader>o", "<cmd>NvimTreeFocus<CR>", opts)
 
 -- Dashboard
