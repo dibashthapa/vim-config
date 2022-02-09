@@ -16,7 +16,12 @@ function M.config()
   local diagnostics = null_ls.builtins.diagnostics
 
   null_ls.setup {
-    debug = false,
+    debug = true,
+    log = {
+    enable = true,
+    level = "warn",
+    use_console = "async",
+    },
     sources = {
       -- Set a formatter
       formatting.rufo,
@@ -27,7 +32,8 @@ function M.config()
     -- NOTE: You can remove this on attach function to disable format on save
     on_attach = function(client)
       if client.resolved_capabilities.document_formatting then
-        vim.cmd "autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()"
+        vim.cmd "autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 10000)"
+        -- vim.cmd "autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil , 1000)"
       end
     end,
   }
