@@ -17,10 +17,11 @@ function M.config()
 
   null_ls.setup {
     debug = true,
+    offset_encoding = "utf-8",
     log = {
-    enable = true,
-    level = "warn",
-    use_console = "async",
+      enable = true,
+      level = "warn",
+      use_console = "async",
     },
     sources = {
       -- Set a formatter
@@ -29,14 +30,14 @@ function M.config()
       formatting.lua_format,
       -- Set a linter
       diagnostics.rubocop,
-      formatting.clang_format
+      -- formatting.clang_format
     },
     -- NOTE: You can remove this on attach function to disable format on save
     on_attach = function(client)
       if client.resolved_capabilities.document_formatting then
         vim.cmd "autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 10000)"
-        -- vim.cmd "autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil , 1000)"
       end
+
     end,
   }
 end
