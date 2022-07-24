@@ -16,7 +16,7 @@ function M.config()
     black_1 = "#252931",
     black_2 = "#2c323c",
     green = "#95be76",
-    none = "NONE",
+    none = "#252931",
   }
 
   bufferline.setup {
@@ -50,7 +50,7 @@ function M.config()
       buffer_selected = {
         guifg = colors.grey,
         guibg = colors.black,
-        gui = colors.none,
+        gui = "bold,italic"
       },
       buffer_visible = {
         guifg = colors.grey,

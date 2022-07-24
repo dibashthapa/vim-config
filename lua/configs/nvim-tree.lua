@@ -8,29 +8,7 @@ function M.config()
 
   local g = vim.g
 
-  g.nvim_tree_indent_markers = 1
 
-  g.nvim_tree_icons = {
-    default = "",
-    symlink = "",
-    git = {
-      deleted = "",
-      ignored = "◌",
-      renamed = "➜",
-      staged = "✓",
-      unmerged = "",
-      unstaged = "✗",
-      untracked = "★",
-    },
-    folder = {
-      default = "",
-      empty = "",
-      empty_open = "",
-      open = "",
-      symlink = "",
-      symlink_open = "",
-    },
-  }
 
   nvimtree.setup {
     filters = {
@@ -48,11 +26,8 @@ function M.config()
       "startify",
       "alpha",
     },
-    auto_close = true,
     open_on_tab = false,
-    quit_on_open = false,
     hijack_cursor = true,
-    hide_root_folder = true,
     update_cwd = true,
     update_focused_file = {
       enable = true,
@@ -72,7 +47,6 @@ function M.config()
       width = 25,
       height = 30,
       side = "left",
-      allow_resize = true,
       hide_root_folder = false,
       number = false,
       relativenumber = false,
@@ -83,12 +57,40 @@ function M.config()
       ignore = false,
       timeout = 500,
     },
-    show_icons = {
-      git = 1,
-      folders = 1,
-      files = 1,
-      folder_arrows = 0,
-      tree_width = 30,
+    renderer = {
+      indent_markers = {
+        enable = true
+      },
+      icons = {
+        show = {
+          git = true,
+          folder = true,
+          file = true,
+          folder_arrow = true,
+        },
+        glyphs = {
+          default = "",
+          symlink = "",
+          git = {
+            deleted = "",
+            ignored = "◌",
+            renamed = "➜",
+            staged = "✓",
+            unmerged = "",
+            unstaged = "✗",
+            untracked = "★",
+          },
+          folder = {
+            default = "",
+            empty = "",
+            empty_open = "",
+            open = "",
+            symlink = "",
+            symlink_open = "",
+          },
+
+        }
+      }
     },
   }
 end

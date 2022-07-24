@@ -26,8 +26,10 @@ function M.config()
       -- Set a formatter
       formatting.rufo,
       formatting.prettier,
+      formatting.lua_format,
       -- Set a linter
       diagnostics.rubocop,
+      formatting.clang_format
     },
     -- NOTE: You can remove this on attach function to disable format on save
     on_attach = function(client)
