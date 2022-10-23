@@ -4,7 +4,7 @@ local config = {
 
   plugins = {},
 
-  virtual_text = true,
+  virtual_text = false,
 
   enabled = {
     comment = true,
