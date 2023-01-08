@@ -42,93 +42,94 @@ function M.config()
 
     highlights = {
       background = {
-        guifg = colors.grey_1,
-        guibg = colors.black_2,
+        fg = colors.grey_1,
+        bg = colors.black_2,
       },
 
       -- Buffers
       buffer_selected = {
-        guifg = colors.grey,
-        guibg = colors.black,
-        gui = "bold,italic"
+        fg = colors.grey,
+        bg = colors.black,
+        bold = true ,
+        italic= true,
       },
       buffer_visible = {
-        guifg = colors.grey,
-        guibg = colors.black,
+        fg = colors.grey,
+        bg = colors.black,
       },
 
       -- Diagnostics
       error = {
-        guifg = colors.red_1,
-        guibg = colors.red_1,
+        fg = colors.red_1,
+        bg = colors.red_1,
       },
       error_diagnostic = {
-        guifg = colors.red_1,
-        guibg = colors.red_1,
+        fg = colors.red_1,
+        bg = colors.red_1,
       },
 
       -- Close buttons
       close_button = {
-        guifg = colors.grey_1,
-        guibg = colors.black_2,
+        fg = colors.grey_1,
+        bg = colors.black_2,
       },
       close_button_visible = {
-        guifg = colors.grey_2,
-        guibg = colors.black,
+        fg = colors.grey_2,
+        bg = colors.black,
       },
       close_button_selected = {
-        guifg = colors.red,
-        guibg = colors.black,
+        fg = colors.red,
+        bg = colors.black,
       },
       fill = {
-        guifg = colors.grey_1,
-        guibg = colors.black_2,
+        fg = colors.grey_1,
+        bg = colors.black_2,
       },
       indicator_selected = {
-        guifg = colors.black,
-        guibg = colors.black,
+        fg = colors.black,
+        bg = colors.black,
       },
 
       -- Modified
       modified = {
-        guifg = colors.red,
-        guibg = colors.black_2,
+        fg = colors.red,
+        bg = colors.black_2,
       },
       modified_visible = {
-        guifg = colors.grey,
-        guibg = colors.black,
+        fg = colors.grey,
+        bg = colors.black,
       },
       modified_selected = {
-        guifg = colors.green,
-        guibg = colors.black,
+        fg = colors.green,
+        bg = colors.black,
       },
 
       -- Separators
       separator = {
-        guifg = colors.black_2,
-        guibg = colors.black_2,
+        fg = colors.black_2,
+        bg = colors.black_2,
       },
       separator_visible = {
-        guifg = colors.black,
-        guibg = colors.black,
+        fg = colors.black,
+        bg = colors.black,
       },
       separator_selected = {
-        guifg = colors.black_2,
-        guibg = colors.black_2,
+        fg = colors.black_2,
+        bg = colors.black_2,
       },
 
       -- Tabs
       tab = {
-        guifg = colors.grey,
-        guibg = colors.black,
+        fg = colors.grey,
+        bg = colors.black,
       },
       tab_selected = {
-        guifg = colors.black,
-        guibg = colors.black,
+        fg = colors.black,
+        bg = colors.black,
       },
       tab_close = {
-        guifg = colors.black,
-        guibg = colors.black,
+        fg = colors.black,
+        bg = colors.black,
       },
     },
   }
